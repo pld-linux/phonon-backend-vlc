@@ -9,8 +9,7 @@ Version:	0.2.0
 Release:	1
 License:	LGPL 2.1
 Group:		X11/Applications
-#Source0:	ftp://ftp.kde.org/pub/kde/stable/%{name}/%{version}/src/%{name}-%{version}.tar.gz
-Source0:	ftp://ftp.kde.org/pub/kde/stable/%{name}/%{version}/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.kde.org/pub/kde/stable/%{name}/%{version}/src/%{name}-%{version}.tar.gz
 # Source0-md5:	33a1ca367989e306507ea633c99b8df5
 #URL:		http://
 BuildRequires:	automoc4 >= 0.9.88
