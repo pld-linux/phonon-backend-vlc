@@ -1,22 +1,22 @@
-%define		qtver		4.6.3
-%define		kdever		4.4.5
+%define		qtver		4.7.1
+%define		kdever		4.5.5
 %define		vlcver		1.1.0
 
 Summary:	VLC backend for Phonon
 Summary(pl.UTF-8):	Wtyczka VLC dla Phonona
 Name:		phonon-backend-vlc
-Version:	0.2.0
+Version:	0.3.2
 Release:	1
 License:	LGPL 2.1
 Group:		X11/Applications
-Source0:	ftp://ftp.kde.org/pub/kde/stable/%{name}/%{version}/src/%{name}-%{version}.tar.gz
-# Source0-md5:	33a1ca367989e306507ea633c99b8df5
+Source0:	ftp://ftp.kde.org/pub/kde/stable/phonon/%{name}/%{version}/src/%{name}-%{version}.tar.bz2
+# Source0-md5:	40076298deb89a1f2fd7f43c95e344fb
 #URL:		http://
 BuildRequires:	automoc4 >= 0.9.88
 BuildRequires:	cmake >= 2.8.0
 BuildRequires:	kde4-kdebase-workspace-devel >= %{kdever}
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
-BuildRequires:	phonon-devel
+BuildRequires:	phonon-devel >= 4.4.4
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
 BuildRequires:	vlc-devel >= %{vlcver}
