@@ -20,7 +20,8 @@ BuildRequires:	phonon-devel >= 4.4.4
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
 BuildRequires:	vlc-devel >= %{vlcver}
-BuildRequires:	rpmbuild(macros) >= 1.293
+BuildRequires:	rpmbuild(macros) >= 1.600
+Provides:	qt4-phonon-backend = %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,12 +36,8 @@ Wtyczka VLC dla Phonona.
 %build
 install -d build
 cd build
-%cmake .. \
-	-DCMAKE_BUILD_TYPE=%{!?debug:Release}%{?debug:Debug} \
-	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
-%if "%{_lib}" == "lib64"
-	-DLIB_SUFFIX=64
-%endif
+%cmake \
+	../
 
 %{__make}
 
