@@ -5,12 +5,12 @@
 Summary:	VLC backend for Phonon
 Summary(pl.UTF-8):	Wtyczka VLC dla Phonona
 Name:		phonon-backend-vlc
-Version:	0.4.0
+Version:	0.4.1
 Release:	1
 License:	LGPL 2.1
 Group:		X11/Applications
-Source0:	ftp://ftp.kde.org/pub/kde/stable/phonon/%{name}/%{version}/src/%{name}-%{version}.tar.bz2
-# Source0-md5:	e6ef8c5b54a49610d4dad67754392420
+Source0:	ftp://ftp.kde.org/pub/kde/stable/phonon/%{name}/%{version}/%{name}-%{version}.tar.bz2
+# Source0-md5:	bdf188c0d3ad3458e7e39ecad06a500b
 #URL:		http://
 BuildRequires:	automoc4 >= 0.9.88
 BuildRequires:	cmake >= 2.8.0
@@ -21,6 +21,7 @@ BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
 BuildRequires:	vlc-devel >= %{vlcver}
 BuildRequires:	rpmbuild(macros) >= 1.600
+Patch0:		%{name}-FindPhonon.cmake.patch
 Provides:	qt4-phonon-backend = %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,6 +33,7 @@ Wtyczka VLC dla Phonona.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 install -d build
@@ -39,7 +41,7 @@ cd build
 %cmake \
 	../
 
-%{__make}
+%{__make} -j1
 
 %install
 rm -rf $RPM_BUILD_ROOT
