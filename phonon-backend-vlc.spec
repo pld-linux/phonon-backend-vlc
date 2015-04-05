@@ -16,7 +16,7 @@ Version:	0.8.2
 Release:	3
 License:	LGPL v2.1+
 Group:		X11/Applications
-Source0:	ftp://ftp.kde.org/pub/kde/stable/phonon/phonon-backend-vlc/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/stable/phonon/phonon-backend-vlc/%{version}/src/%{name}-%{version}.tar.xz
 # Source0-md5:	3937517ce4929dea4398ad9834507f97
 #URL:		http://
 BuildRequires:	cmake >= 2.8.6
