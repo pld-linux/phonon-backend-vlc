@@ -12,12 +12,12 @@
 Summary:	VLC backend for Phonon
 Summary(pl.UTF-8):	Wtyczka VLC dla Phonona
 Name:		phonon-backend-vlc
-Version:	0.8.2
-Release:	3
+Version:	0.9.1
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Applications
-Source0:	http://download.kde.org/stable/phonon/phonon-backend-vlc/%{version}/src/%{name}-%{version}.tar.xz
-# Source0-md5:	3937517ce4929dea4398ad9834507f97
+Source0:	https://download.kde.org/stable/phonon/phonon-backend-vlc/%{version}/%{name}-%{version}.tar.xz
+# Source0-md5:	5169203a485bf800bdc092e0b6efe646
 #URL:		http://
 BuildRequires:	cmake >= 2.8.6
 BuildRequires:	vlc-devel >= %{vlc_ver}
